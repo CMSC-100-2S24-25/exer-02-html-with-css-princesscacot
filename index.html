@@ -7,7 +7,7 @@
             body {
                 background-color: #f4f4f4;
                 text-align: center;
-                font-family: 'Exo', sans-serif; 
+                font-family: 'Exo'; 
             }
             header {
                 background: rgb(248, 242, 223);
@@ -136,7 +136,7 @@
 
             /* smaller row(first row) */
             .project-box.small {
-                background: rgb(248, 226, 182);
+                background: rgb(255, 244, 221);
                 font-size: 14px;
                 font-weight: bold;
                 display: flex;
@@ -163,7 +163,7 @@
 
             /* Third row for  descriptions */
             .project-box.text {
-                background: rgb(247, 239, 221);
+                background: rgb(255, 244, 221);
                 font-size: 12px;
                 padding: 10px;
                 display: flex;
@@ -171,6 +171,67 @@
                 justify-content: center;
                 border-radius: 10px;
             }
+            .skills-container {
+                display: grid;
+                grid-template-columns: 1fr; /* Only 1 column*/
+                gap: 10px;
+                padding: 20px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                width: 100%;
+                max-width: 700px;
+                margin: 10px auto;
+                text-align: center;
+            }
+
+            /* Full-width title row */
+            .skills-box.title {
+                grid-column: span 1; 
+                background: rgb(245, 227, 199);
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                padding: 10px;
+                border-radius: 10px;
+                color: black;
+            }
+
+            /* Second row - Image + Text */
+            .skills-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* 2 equal columns */
+                align-items: center;
+                gap: 10px;
+            }
+
+            /* Image styling */
+            .skills-box.image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .skills-box.image img {
+                width: 100%;
+                max-width: 170px;
+                height: auto;
+                object-fit: contain;
+                border-radius: 10px;
+            }
+
+            /* Text beside image */
+            .skills-box.text {
+                background: rgb(255, 244, 221);
+                font-size: 14px;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                text-align: left;
+            }
+
            
         </style>
     </head>
@@ -224,6 +285,25 @@
                         </div>
                     </div>
             </div> <!--end of about me container-->
+
+            <div class="skills-container">
+                <!-- Full-width title row -->
+                <div class="skills-box title">SKILLS</div>
+            
+                <!-- Second row - Image and Text side by side -->
+                <div class="skills-content">
+                    <!-- Image Left -->
+                    <div class="skills-box image">
+                        <img src="creativeoutput.png" alt="Skills Image">
+                    </div>
+                    <!-- Text Right -->
+                    <div class="skills-box text">
+                        A few key skills that would benefit me in web development include strong communication and creativity. I can easily adapt to different people, making it easy for me to work with any team. Since primary school, I have been passionate about design and creativity. I enjoy creating posters and occasionally editing videos, which has helped me develop the creative skills needed for web design.
+                    </div>
+                </div>
+            </div>
+            <!-- end of skills -->
+
     
         
             <div class="projects-container">
@@ -252,6 +332,7 @@
                 <div class="project-box text">A game built with Java, where users can select pets from a given selection and have the option to reshuffle them. Users are provided with a specific amount of money, which is deducted when purchasing pets. Once satisfied with their selection, the game begins.
                 </div>
             </div> <!-- end of projects container-->
+
 
             
         </div>
