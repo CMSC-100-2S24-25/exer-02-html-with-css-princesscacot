@@ -1,61 +1,259 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-        <title> Website Portfolio </title> 
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@300;400;600&display=swap" rel="stylesheet">
+        <title>Website Portfolio</title>
         <style>
-            .flex-container {
-                display: flex;
-                background-color: bisque;
-                }
-
-                .flex-container > div {
-                background-color: white;
-                margin: 10px;
+            body {
+                background-color: #f4f4f4;
+                text-align: center;
+                font-family: 'Exo', sans-serif; 
+            }
+            header {
+                background: rgb(248, 242, 223);
+                color: black;
+                padding: 15px;
+                font-size: 24px;
+            }
+            .background-container {
+                background: white;
                 padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 800px;
+                margin: 20px auto;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            /* another container for Profile and About Me */
+            .about-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+                max-width: 700px;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+            .profile {
+                text-align: left;
+                max-width: 300px;
+                flex: 1;
+            }
+            .profile img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid #000000;
+            }
+            .profile-text {
+                text-align: left; /*  text to  left */
+                width: 100%;
+                margin-top: 10px; /* space between image and text */
+            }
+            .aboutme-container {
+                background: rgb(255, 255, 255);
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                flex: none;  
+                width: 50%;  
+                max-width: 350px; /* Prevents from becoming too wide */
+                min-width: 280px; /* Ensures not too small */
+                text-align: left;
+            }
+            .aboutme-container h2 {
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .aboutme-container p {
+                font-size: 16px;
+            }
+
+            /* looks like table on about */
+            .about-table {
+                display: flex;
+                flex-direction: column;
+                gap: 1px; /* Space between rows */
+            }
+
+            /* Individual row */
+            .about-row {
+                display: flex;
+                align-items: center;
+                gap: 10px; /* Space between icon and text */
+            }
+
+            /* Mini icon */
+            .about-icon {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                width: 100%;
+            }
+
+            /* for the projects  */
+            .projects-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 40px auto auto;
+                gap: 10px;
+                padding: 20px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                width: 100%;
+                max-width: 700px;
+                margin: 10px auto;
+                text-align: center;
+            }
+
+            /* Full-width row */
+            .project-box.title {
+                grid-column: span 3;
+                background: rgb(245, 227, 199);
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                padding: 10px;
+                border-radius: 10px;
+                color: black;
+            }
+
+            /* smaller row(first row) */
+            .project-box.small {
+                background: rgb(248, 226, 182);
+                font-size: 14px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                height: 40px; /* Half height onlyy */
+                padding: 5px;
+            }
+
+            /* Second row - for images */
+            .project-box.image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .project-box.image img {
+                width: 100%;
+                height: auto;
+                max-height: 150px; 
+                object-fit: contain;
+            }
+
+            /* Third row for  descriptions */
+            .project-box.text {
+                background: rgb(247, 239, 221);
                 font-size: 12px;
-                border-width: 10px;
-                border-color: black;
-                }
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+            }
+           
         </style>
-
-        <body>
-            <h1 style="background-color:powderblue;" > Website Portfolio</h1>
-            <p>
-                I am Princess Ann Cacot, 20 years old and born on Sept 29, 2004. 
-                <hr/>
-
-            <h2> Projects Done</h2>
-
-             <div class= "flex-container">
-                    <div>
-
-                        <p style="font-size:2vw;">
-                        BMI calculator
-                        </p>
-                    </div>
-                    <div>    
-                        <p style="font-size:2vw;">
-                        Student Library System
-                        </p>
-                    </div>
-                
-                    <div>
-                        <p style="font-size:2vw;">
-                        AutoPets Game 
-                        </p>
-                    </div>
-            
-            </div> 
-                    
-                </div>
-            </div>
-
-
-            </p> 
-
-
-            
-        </body>
     </head>
-</html> 
+    <body>
+        <header>Website Portfolio</header>
+        <div class="background-container">
+            <div class="container">
+                <!-- New About Container -->
+                <div class="about-container">
+                    <!-- Profile Left Side -->
+                    <div class="profile">
+                        <img src="id pic.png" alt="Profile Picture">
+                        <div class="profile-text">
+                            <h2>Princess Ann Cacot</h2>
+                            <p>
+                                Degree Program: BS Computer Science <br>
+                                Contact no.: 09957462669 <br>
+                                Email: pvcacot@up.edu.ph <br>
+                                Address: Sitio Evergreen,Varsity Lane, Philand, Brgy. Pasong Tamo, Quezon City
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="aboutme-container">
+                        <h2>About Me</h2>
+                        <!-- About table -->
+                        <div class="about-table">
+                            <!-- Row 1 -->
+                            <div class="about-row">
+                                <img src="aboutmelogo.png" alt="Code" class="about-icon">
+                                <p> I am Princess Ann V. Cacot, a 20-year-old aspiring web developer and graphic designer. I have a strong interest in creating visually appealing and functional digital experiences. </p>
+                            </div>
+                    
+                            <!-- Row 2 -->
+                            <div class="about-row">
+                                <img src="educlogo.png" alt="Bulb" class="about-icon">
+                                <p> Primary Education: Saint Anthony Academy of Quezon City <br>
+                                    Secondary Education: Far Eastern Univesity & University of Santo Tomas<br>
+                                    Tertiary Education: Univesity of the Philippines Los Banos 
+                                </p>
+
+                            </div>
+                            <!-- Row 3 -->
+                            <div class="about-row">
+                                <img src="skillslogo.png" alt="Game" class="about-icon">
+                                <p> Programming Language Used: <br>
+                                    Python, JavaScript, C, Dart
+                
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div> <!--end of about me container-->
+    
+        
+            <div class="projects-container">
+                <!-- Full-width title row -->
+                <div class="project-box title">PROJECTS</div>
+
+                <!-- First row - Titles -->
+                <div class="project-box small">Population Growth Calculator</div>
+                <div class="project-box small">Student Library System </div>
+                <div class="project-box small">AutoPets Game</div>
+            
+                <!-- Second row - Images -->
+                <div class="project-box image">
+                    <img src="calculatorlogo.png" alt="Project 1">
+                </div>
+                <div class="project-box image">
+                    <img src="librarysystemlogo.png" alt="Project 2">
+                </div>
+                <div class="project-box image">
+                    <img src="gamelogo.png" alt="Project 3">
+                </div>
+            
+                <!-- Third row - descriptions -->
+                <div class="project-box text">A calculator developed in C that utilizes a recursive function to determine the population size over time. Given an initial population (n), an annual growth rate (y%), and a time period (x years), the program computes the population growth based on user-provided inputs. </div>
+                <div class="project-box text">A library management system developed in Python. Each student is assigned a unique ID when borrowing a book. Details such as the borrowed book, date, time of borrowing and return, along with student check-in/check-out times, are recorded.</div>
+                <div class="project-box text">A game built with Java, where users can select pets from a given selection and have the option to reshuffle them. Users are provided with a specific amount of money, which is deducted when purchasing pets. Once satisfied with their selection, the game begins.
+                </div>
+            </div> <!-- end of projects container-->
+
+            
+        </div>
+    </body>
+</html>
