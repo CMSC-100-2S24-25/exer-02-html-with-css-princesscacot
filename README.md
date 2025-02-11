@@ -4,9 +4,7 @@
 **Section:** C-1L <br/>
 **Student number:** 2023  16035 <br/>
 **Degree Program:** BS Computer Science <br/>
-**Website Link:** 
+**Website Link:**  http://127.0.0.1:5500/index.html
 
-## Steps on how to create GitHub page 
 
-## Key Takeaway
 
