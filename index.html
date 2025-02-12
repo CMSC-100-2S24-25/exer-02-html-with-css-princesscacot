@@ -7,25 +7,25 @@
         body {
                 text-align: center;
                 font-family: 'Exo', sans-serif;
-                background-image: url("bg.png"); /* Ensure correct path */
-                background-size: cover; /* Cover the entire viewport */
-                background-position: center; /* Center the image */
-                background-repeat: no-repeat; /* No tiling */
-                height: 100vh; /* Full height */
+                background-image: url("background.png"); /* backgroundd */
+                background-size: cover; /* Cover the entire view */
+                background-position: center; /* Center */
+                background-repeat: repeat-y; /* since kulang, repeat nalang muna */
+                height: 100vh; 
                 margin: 0;
             }
 
             header {
-                background: rgb(248, 242, 223);
+                background: rgb(113, 144, 237);
                 color: black;
                 padding: 15px;
                 font-size: 24px;
             }
             .background-container {
-                background: white;
+                background: rgb(24, 24, 57);
                 padding: 20px;
                 border-radius: 15px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 10px rgb(255, 255, 255);
                 width: 100%;
                 max-width: 800px;
                 margin: 20px auto;
@@ -59,6 +59,7 @@
                 border: 3px solid #000000;
             }
             .profile-text {
+                color: white;
                 text-align: left; /*  text to  left */
                 width: 100%;
                 margin-top: 10px; /* space between image and text */
@@ -67,7 +68,7 @@
                 background: rgb(255, 255, 255);
                 padding: 15px;
                 border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 15px rgb(255, 255, 255);
                 flex: none;  
                 width: 50%;  
                 max-width: 350px; /* Prevents from becoming too wide */
@@ -83,7 +84,7 @@
                 font-size: 16px;
             }
 
-            /* looks like table on about */
+            /* looks like table  */
             .about-table {
                 display: flex;
                 flex-direction: column;
@@ -121,7 +122,7 @@
                 padding: 20px;
                 background: white;
                 border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 15px rgb(255, 255, 255);
                 width: 100%;
                 max-width: 700px;
                 margin: 10px auto;
@@ -131,7 +132,7 @@
             /* Full-width row */
             .project-box.title {
                 grid-column: span 3;
-                background: rgb(245, 227, 199);
+                background: rgb(152, 171, 242);
                 font-size: 20px;
                 font-weight: bold;
                 text-align: center;
@@ -142,7 +143,7 @@
 
             /* smaller row(first row) */
             .project-box.small {
-                background: rgb(255, 244, 221);
+                background: rgb(207, 215, 246);
                 font-size: 14px;
                 font-weight: bold;
                 display: flex;
@@ -169,7 +170,7 @@
 
             /* Third row for  descriptions */
             .project-box.text {
-                background: rgb(255, 244, 221);
+                background: rgb(207, 215, 246);
                 font-size: 12px;
                 padding: 10px;
                 display: flex;
@@ -184,7 +185,7 @@
                 padding: 20px;
                 background: white;
                 border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 15px rgb(255, 255, 255);
                 width: 100%;
                 max-width: 700px;
                 margin: 10px auto;
@@ -194,7 +195,7 @@
             /* Full-width title row */
             .skills-box.title {
                 grid-column: span 1; 
-                background: rgb(245, 227, 199);
+                background: rgb(152, 171, 242);
                 font-size: 20px;
                 font-weight: bold;
                 text-align: center;
@@ -228,7 +229,7 @@
 
             /* Text beside image */
             .skills-box.text {
-                background: rgb(255, 244, 221);
+                background: rgb(207, 215, 246);
                 font-size: 14px;
                 padding: 20px;
                 display: flex;
@@ -249,7 +250,7 @@
                 <div class="about-container">
                     <!-- Profile Left Side -->
                     <div class="profile">
-                        <img src="id pic.png" alt="Profile Picture">
+                        <img src="id pic.png">
                         <div class="profile-text">
                             <h2>Princess Ann Cacot</h2>
                             <p>
@@ -267,13 +268,13 @@
                         <div class="about-table">
                             <!-- Row 1 -->
                             <div class="about-row">
-                                <img src="aboutmelogo.png" alt="Code" class="about-icon">
+                                <img src="about.png"class="about-icon">
                                 <p> I am Princess Ann V. Cacot, a 20-year-old aspiring web developer and graphic designer. I have a strong interest in creating visually appealing and functional digital experiences. </p>
                             </div>
                     
                             <!-- Row 2 -->
                             <div class="about-row">
-                                <img src="educlogo.png" alt="Bulb" class="about-icon">
+                                <img src="educ.png" class="about-icon">
                                 <p> Primary Education: Saint Anthony Academy of Quezon City <br>
                                     Secondary Education: Far Eastern Univesity & University of Santo Tomas<br>
                                     Tertiary Education: Univesity of the Philippines Los Banos 
@@ -282,9 +283,9 @@
                             </div>
                             <!-- Row 3 -->
                             <div class="about-row">
-                                <img src="skillslogo.png" alt="Game" class="about-icon">
+                                <img src="proglang.png" class="about-icon">
                                 <p> Programming Language Used: <br>
-                                    Python, JavaScript, C, Dart
+                                    Python, JavaScript, C, Dart, Assembly
                 
                                 </p>
                             </div>
@@ -323,13 +324,13 @@
             
                 <!-- Second row - Images -->
                 <div class="project-box image">
-                    <img src="calculatorlogo.png" alt="Project 1">
+                    <img src="calculogo.png" alt="Project 1">
                 </div>
                 <div class="project-box image">
-                    <img src="librarysystemlogo.png" alt="Project 2">
+                    <img src="liblogo.png" alt="Project 2">
                 </div>
                 <div class="project-box image">
-                    <img src="gamelogo.png" alt="Project 3">
+                    <img src="gameslogo.png" alt="Project 3">
                 </div>
             
                 <!-- Third row - descriptions -->
